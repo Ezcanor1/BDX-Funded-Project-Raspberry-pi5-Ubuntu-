@@ -1,0 +1,35 @@
+<mujoco model="my_duck_robot_scene">
+  <compiler/>
+
+  <option>
+    <flag gravity="enable"/>
+  </option>
+
+  <worldbody>
+    <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>
+    <geom type="plane" size="1 1 0.1" rgba=".9 0.9 0.9 1"/>
+    
+    <body name="robot_base" pos="0 0 0.5">
+      <include file="robot.urdf"/>
+    </body>
+
+  </worldbody>
+
+  <actuator>
+    <motor joint="left_hip_yaw"   name="left_hip_yaw_motor"   gear="1"/>
+    <motor joint="left_hip_roll"  name="left_hip_roll_motor"  gear="1"/>
+    <motor joint="left_hip_pitch" name="left_hip_pitch_motor" gear="1"/>
+    <motor joint="left_knee"      name="left_knee_motor"      gear="1"/>
+    <motor joint="left_ankle"     name="left_ankle_motor"     gear="1"/>
+    <motor joint="right_hip_yaw"   name="right_hip_yaw_motor"   gear="1"/>
+    <motor joint="right_hip_roll"  name="right_hip_roll_motor"  gear="1"/>
+    <motor joint="right_hip_pitch" name="right_hip_pitch_motor" gear="1"/>
+    <motor joint="right_knee"      name="right_knee_motor"      gear="1"/>
+    <motor joint="right_ankle"     name="right_ankle_motor"     gear="1"/>
+    <motor joint="neck_pitch" name="neck_pitch_motor" gear="1"/>
+    <motor joint="head_pitch" name="head_pitch_motor" gear="1"/>
+    <motor joint="head_yaw"   name="head_yaw_motor"   gear="1"/>
+    <motor joint="head_roll"  name="head_roll_motor"  gear="1"/>
+  </actuator>
+
+</mujoco>
